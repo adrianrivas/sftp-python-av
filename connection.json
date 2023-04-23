@@ -1,0 +1,8 @@
+{
+    "conexion_sftp": {
+            "hostname":"172.17.10.30",
+            "username":"alandazuri",
+            "password":"Avianca2022",
+            "port":22
+    }
+}
