@@ -13,6 +13,8 @@ def connect_sftp():
     password = os.environ['PASSWORD_SFTP_AVIANCA']
     port = int(os.environ['PORT_SFTP_AVIANCA'])
 
+    print(hostname, username, password, port)
+
     cnopts = pysftp.CnOpts()
     cnopts.hostkeys = None
     
