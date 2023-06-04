@@ -1,20 +1,18 @@
 import pysftp
 import json
 import warnings
+import os
 warnings.filterwarnings("ignore")
 from datetime import datetime
 import pymsteams
 
 def connect_sftp():
+    
+    hostname = os.environ['HOSTNAME_SFTP_AVIANCA']
+    username = os.environ['USERNAME_SFTP_AVIANCA']
+    password = os.environ['PASSWORD_SFTP_AVIANCA']
+    port = int(os.environ['PORT_SFTP_AVIANCA'])
 
-    with open('connection.json', mode='r') as f:
-        __config = json.load(f)
-    
-    hostname = __config['conexion_sftp']['hostname']
-    username = __config['conexion_sftp']['username']
-    password = __config['conexion_sftp']['password']
-    port = __config['conexion_sftp']['port']
-    
     cnopts = pysftp.CnOpts()
     cnopts.hostkeys = None
     
