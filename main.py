@@ -8,10 +8,10 @@ import pymsteams
 
 def connect_sftp():
     
-    hostname = os.environ['HOSTNAME_SFTP_AVIANCA']
-    username = os.environ['USERNAME_SFTP_AVIANCA']
-    password = os.environ['PASSWORD_SFTP_AVIANCA']
-    port = int(os.environ['PORT_SFTP_AVIANCA'])
+    hostname = os.environ['HOSTNAME_SFTP']
+    username = os.environ['USERNAME_SFTP']
+    password = os.environ['PASSWORD_SFTP']
+    port = int(os.environ['PORT_SFTP'])
 
     print(hostname, username, password, port)
 
